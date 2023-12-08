@@ -2,121 +2,254 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <title>HackOps</title>
 
-    <title>LeaderBoard</title>
+  <link rel="shortcut icon" href="./img/logo/banner-image3.png  " type="image/x-icon">
+
+  <link rel="stylesheet" href="./css/bootstrap.min.css" />
+
+  <link rel="stylesheet" href="./css/all.min.css" />
+
+  <link rel="stylesheet" href="./css/style.css" />
 </head>
 
-<body>
+<body id="my-scrollbar">
 
-    <div class="position-absolute top-50 start-50 translate-middle">
-        <h1 id="uniquenumber">No team is Selected</h1>
-        <div class="dropdown">
-            <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                Team Scoring
-            </button>
-            <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#" onclick="selectTeam('0001')">Team 1</a></li>
-                <li><a class="dropdown-item" href="#" onclick="selectTeam('0002')">Team 2</a></li>
-                <li><a class="dropdown-item" href="#" onclick="selectTeam('0003')">Team 3</a></li>
-                <li><a class="dropdown-item" href="#" onclick="selectTeam('0004')">Team 4</a></li>
-                <li><a class="dropdown-item" href="#" onclick="selectTeam('0005')">Team 5</a></li>
-                <li><a class="dropdown-item" href="#" onclick="selectTeam('0006')">Team 6</a></li>
-                <li><a class="dropdown-item" href="#" onclick="selectTeam('0007')">Team 7</a></li>
-                <li><a class="dropdown-item" href="#" onclick="selectTeam('0008')">Team 8</a></li>
-                <li><a class="dropdown-item" href="#" onclick="selectTeam('0009')">Team 9</a></li>
-                <li><a class="dropdown-item" href="#" onclick="selectTeam('0010')">Team 10</a></li>
-                <li><a class="dropdown-item" href="#" onclick="selectTeam('0011')">Team 11</a></li>
-                <li><a class="dropdown-item" href="#" onclick="selectTeam('0012')">Team 12</a></li>
-                <li><a class="dropdown-item" href="#" onclick="selectTeam('0013')">Team 13</a></li>
-                <li><a class="dropdown-item" href="#" onclick="selectTeam('0014')">Team 14</a></li>
-                <li><a class="dropdown-item" href="#" onclick="selectTeam('0015')">Team 15</a></li>
-                <li><a class="dropdown-item" href="#" onclick="selectTeam('0016')">Team 16</a></li>
-                <li><a class="dropdown-item" href="#" onclick="selectTeam('0017')">Team 17</a></li>
-                <li><a class="dropdown-item" href="#" onclick="selectTeam('0018')">Team 18</a></li>
-                <li><a class="dropdown-item" href="#" onclick="selectTeam('0019')">Team 19</a></li>
-                <li><a class="dropdown-item" href="#" onclick="selectTeam('0020')">Team 20</a></li>
-                <li><a class="dropdown-item" href="#" onclick="selectTeam('0021')">Team 21</a></li>
-                <li><a class="dropdown-item" href="#" onclick="selectTeam('0022')">Team 22</a></li>
-            </ul>
+  <div class="main-menu">
+    <nav class="navbar navbar-expand-md sticky-top">
+      <div class="container-fluid">
+        <div class="navbar-brand"><img src="./img/logo/banner-image3.png" alt="logo"></div>
+        <button class="hamburger navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+          data-bs-toggle="collapse" data-bs-target="#navbarNav">
+          <div class="bar"></div>
+        </button>
+        <div class="main-nav collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link active" href="#home">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#about">About</a>
+            </li>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#timeline">Timeline</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#sponsers">Sponsers</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#prize">Prize</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#team">Team</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#faq">FAQ</a>
+            </li>
+            <li class="nav-item">
+              <div class="button-1 primary-button"><a style="color: whitesmoke;" href="./signin_signup.html">Log in</a></div>
+            </li>
+          </ul>
         </div>
-        <div class="card" style="width: 18rem;">
-            <div class="card-body">
-                <h5 class="card-title">ScoreBoard Updater</h5>
-                <p class="card-text">
-                    <div class="form-floating mb-3">
-                        <input type="text" class="form-control" id="teamIdInput" value="" placeholder="Team ID">
-                        <label for="teamIdInput">Team ID:</label>
-                    </div>
-                    <div class="form-floating">
-                        <input type="number" name='score' class="form-control" id="scoreInput" placeholder="Score">
-                        <label for="scoreInput">Score</label>
-                    </div>
-                </p>
-                <button class="btn btn-primary" onclick="updateScore()">Update Score</button>
+      </div>
+    </nav>
+  </div>
+
+  <main class="site-main">
+    <section class="parallax" id="home">
+      <img src="./img/banner/home-bg.jpg" alt="bg" id="bg" />
+      <div class="main-head">
+        <h2 id="text">HackOps<h2 class="stroke">'24</h2>
+        </h2>
+      </div>
+      <img src="./img/banner/home-fg.png" alt="fg" id="fg" />
+    </section>
+
+
+    <section class="site-about" id="about">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 site-title">
+            <h1 class="text-center title-text">About</h1>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-6 cl-md-12 site-title">
+            <h4 class="text-center title-text text-uppercase">
+              Get your creative hats on and join us on this incredible ride to
+              build something out of the box.
+            </h4>
+            <h6 class="text-center title-text text-uppercase">
+              Journey into the realms of code starts in ...
+            </h6>
+            <div class="site-button text-center">
+              <a href="https://forms.gle/FHiUKoFEaEHZSqkT7" style="text-decoration: none;">
+                <div class="button-2 primary-button" id="n-button"></div>
+              </a>
             </div>
+          </div>
+          <div class="col-lg-6 cl-md-12 banner-image text-center">
+            <img src="./img/banner/boy-banner.png" alt="banner" class="img-fluid" />
+          </div>
         </div>
+      </div>
+    </section>
+
+    <section class="site-timeline" id="timeline">
+      <div class="bg-black">
+        <h1 class="text-center">Timeline</h1>
+      </div>
+      <div class="timeline">
+        <div class="timeline-container">
+          <div class="timeline__wrapper">
+            <div class="timeline__progressbar"></div>
+            <div class="timeline__block">
+              <div class="timeline__block__bullet-point">
+                <span class="timeline__block__circle"></span>
+              </div>
+              <div class="timeline__block__head">
+                <h1 class="timeline__block__title">20th Dec 2023</h1>
+              </div>
+              <div class="timeline__block__body">
+                <p class="timeline__block__text">
+                  Registration Starts</p>
+                <p class="timeline__block__text">
+                  Register yourself at devfolio by submitting your details.</p>
+              </div>
+            </div>
+            <div class="timeline__block">
+              <div class="timeline__block__bullet-point">
+                <span class="timeline__block__circle"></span>
+              </div>
+              <div class="timeline__block__head">
+                <h1 class="timeline__block__title">15th Jan 2024</h1>
+              </div>
+              <div class="timeline__block__body">
+                <p class="timeline__block__text">
+                  Registration Ends</p>
+                <p class="timeline__block__text">
+                  We'll review your appication and presentation, will let you know.</p>
+              </div>
+            </div>
+            <div class="timeline__block">
+              <div class="timeline__block__bullet-point">
+                <span class="timeline__block__circle"></span>
+              </div>
+              <div class="timeline__block__head">
+                <h1 class="timeline__block__title">20th Jan 2024</h1>
+              </div>
+              <div class="timeline__block__body">
+                <p class="timeline__block__text">
+                  Offline Registration Starts</p>
+                <p class="timeline__block__text">
+                  Register yourself for the offline event.</p>
+              </div>
+            </div>
+            <div class="timeline__block">
+              <div class="timeline__block__bullet-point">
+                <span class="timeline__block__circle"></span>
+              </div>
+              <div class="timeline__block__head">
+                <h1 class="timeline__block__title">30th Jan 2024</h1>
+              </div>
+              <div class="timeline__block__body">
+                <p class="timeline__block__text">
+                  Offline Registration Ends</p>
+                <p class="timeline__block__text">
+                  We'll share the details of the event</p>
+              </div>
+            </div>
+            <div class="timeline__block">
+              <div class="timeline__block__bullet-point">
+                <span class="timeline__block__circle"></span>
+              </div>
+              <div class="timeline__block__head">
+                <h1 class="timeline__block__title">5th Feb 2024</h1>
+              </div>
+              <div class="timeline__block__body">
+                <p class="timeline__block__text">
+                  Hackathon Starts</p>
+                <p class="timeline__block__text">
+                  You can start implementing your project after inauguration ceremony.</p>
+              </div>
+            </div>
+            <div class="timeline__block">
+              <div class="timeline__block__bullet-point">
+                <span class="timeline__block__circle"></span>
+              </div>
+              <div class="timeline__block__head">
+                <h1 class="timeline__block__title">June 2020</h1>
+              </div>
+              <div class="timeline__block__body">
+                <p class="timeline__block__text">
+                  Hackathon Ends</p>
+                <p class="timeline__block__text">
+                  Submit your project for final screening.</p>
+              </div>
+            </div>
+            <div class="timeline__hider"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <section class="site-sponsers" id="sponsers">
+      <div>
+        <h1 class="text-center">Sponsers</h1>
+      </div>
+      <div class="sponsers-slider">
+        <div class="slider">
+          <span class="text-uppercase anim">Sponser1</span>
+          <span class="text-uppercase anim">Sponser2</span>
+          <span class="text-uppercase anim">Sponser3</span>
+          <span class="text-uppercase anim">Sponser4</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="site-prize" id="prize">
+
+    </section>
+
+    <div class="footer text-center">
+      <div class="mb-4">
+        Copyright &copy; CreatED 2024
+      </div>
+      <a href="https://www.facebook.com/" class="mx-2" style="color: white;">
+        <i class="fab fa-facebook-f"></i>
+      </a>
+      <a href="https://github.com/" class="mx-2" style="color: white;">
+        <i class="fab fa-github"></i>
+      </a>
+      <a href="https://twitter.com/" class="mx-2" style="color: white;">
+        <i class="fab fa-twitter"></i>
+      </a>
+      <a href="https://www.linkedin.com/" class="mx-2" style="color: white;">
+        <i class="fab fa-linkedin"></i>
+      </a>
     </div>
+  </main>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.3/gsap.min.js"
+    integrity="sha512-7Au1ULjlT8PP1Ygs6mDZh9NuQD0A5prSrAUiPHMXpU6g3UMd8qesVnhug5X4RoDr35x5upNpx0A6Sisz1LSTXA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.3/ScrollTrigger.min.js"
+    integrity="sha512-LQQDtPAueBcmGXKdOBcMkrhrtqM7xR2bVrnMtYZ8ImAZhFlIb5xrMqQ6uZviyeSB+4mYj89ta8niiCIQM1Gj0w=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.29/bundled/lenis.min.js"></script>
+  <script src="./js/script.js"></script>
+  <script src="./js/jquery.3.4.1.js"></script>
+  <script src="./js/bootstrap.min.js"></script>
+  <script src="https://kit.fontawesome.com/894b2c3f25.js" crossorigin="anonymous"></script>
 
 
+  <script>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
-<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
-<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
-
-<script>
- const firebaseConfig = {
-    apiKey: "AIzaSyBnI29qAXbGVfLv53Ol6zJuMmehkUX7lPI",
-    authDomain: "check-52e91.firebaseapp.com",
-    databaseURL: "https://check-52e91-default-rtdb.firebaseio.com",
-    projectId: "check-52e91",
-    storageBucket: "check-52e91.appspot.com",
-    messagingSenderId: "842370923346",
-    appId: "1:842370923346:web:29c08a986b114b22bc188b"
-};
-    firebase.initializeApp(firebaseConfig);
-
-    function selectTeam(teamId) {
-        $("#uniquenumber").text("Team " + teamId + " is selected");
-        $("#teamIdInput").val(teamId);
-        fetchScore(teamId);
-    }
-// Function to fetch score
-function fetchScore(teamId) {
-        firebase.database().ref("scoreboard/" + teamId).once("value")
-            .then(function(snapshot) {
-                var userData = snapshot.val();
-                    document.querySelector("input[name='score']").value = userData.score;
-            })
-    } 
-
-
-// Function to update score
-function updateScore() {
-        var teamIdInput = document.getElementById('teamIdInput');
-        var teamId = teamIdInput.value;
-        console.log(teamId);            
-        var updates = {
-            score: document.getElementById("scoreInput").value,
-        };
-        firebase.database().ref("scoreboard/" + teamId).update(updates)
-            .then(function() {
-                alert("Data updated successfully");
-            })
-            .catch(function(error) {
-                alert("Error updating data: ", error);
-            });
-    }
-
- 
-</script>
-
+  </script>
 
 </body>
 

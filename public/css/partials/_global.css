@@ -1,0 +1,127 @@
+.title-text {
+  font: normal 50px/50px var(--nexa);
+}
+
+.text-uppercase {
+  text-transform: uppercase;
+}
+
+.button-1 {
+  padding: 0.8rem 2.2rem;
+  font: normal 500 16px/20px var(--inter);
+  position: relative;
+  border: 3px solid transparent;
+  border-radius: 5px;
+}
+
+.button-1.primary-button {
+  background: var(--gradient-color);
+  background-clip: padding-box;
+  color: whitesmoke;
+  transition: background 0.6s ease;
+  box-shadow: var(--box-shadow);
+}
+
+.button-1.primary-button:hover {
+  background: whitesmoke;
+  background-clip: padding-box;
+  color: black;
+}
+
+.button-1.primary-button::after {
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  bottom: -2px;
+  right: -2px;
+  background: var(--gradient-color);
+  content: "";
+  z-index: -1;
+  border-radius: 4px;
+}
+
+.button-2 {
+  width: 150px;
+  height: 50px;
+  border-radius: 180px;
+  position: relative;
+  left: calc(50% - 75px);
+  top: calc(50% - 25px);
+  background: linear-gradient(
+    60deg,
+    #f79533,
+    #f37055,
+    #ef4e7b,
+    #a166ab,
+    #5073b8,
+    #1098ad,
+    #07b39b,
+    #6fba82
+  );
+  cursor: pointer;
+  line-height: 12px;
+}
+
+.button-2:before {
+  content: "";
+  z-index: 1;
+  position: absolute;
+  display: block;
+  width: 80%;
+  height: 70%;
+  top: 15%;
+  left: 10%;
+  transition: 0.3s opacity ease-in-out;
+  filter: blur(15px);
+  opacity: 0;
+  background: linear-gradient(
+    60deg,
+    #f79533,
+    #f37055,
+    #ef4e7b,
+    #a166ab,
+    #5073b8,
+    #1098ad,
+    #07b39b,
+    #6fba82
+  );
+}
+
+.button-2:hover:before {
+  opacity: 1;
+  transition: 0.3s opacity ease-in-out;
+  filter: blur(25px);
+  background: linear-gradient(
+    60deg,
+    #f79533,
+    #f37055,
+    #ef4e7b,
+    #a166ab,
+    #5073b8,
+    #1098ad,
+    #07b39b,
+    #6fba82
+  );
+}
+
+.button-2:after {
+  content: "Register";
+  text-align: center;
+  line-height: 40px;
+  font-size: 18px;
+  color: rgba(235, 235, 235, 1);
+  font-weight: bold;
+  z-index: 5;
+  position: absolute;
+  display: block;
+  border-radius: 180px;
+  width: 92%;
+  height: 80%;
+  top: 10%;
+  left: 4%;
+  background-color: rgb(19, 20, 22);
+}
+
+::-webkit-scrollbar {
+  width: 0;
+}
